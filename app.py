@@ -14,40 +14,43 @@ st.set_page_config(
 st.markdown("""
     <style>
         .stApp {
-            background: linear-gradient(135deg, #0d1b4c 0%, #16307a 35%, #2a5298 70%, #7db9e8 100%);
-            background-attachment: fixed;
+            background-color: #eef3fb;
         }
         .block-container {
             padding-top: 2rem;
         }
-        h1, h2, h3, h4, p, label, span, .stMarkdown {
-            color: #eaf2ff;
-        }
         .title-box {
             text-align: center;
-            padding: 10px 10px 20px 10px;
+            padding: 22px 10px;
+            background: linear-gradient(90deg, #123a7a, #2a5298);
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 18px rgba(18, 58, 122, 0.25);
         }
         .title-box h1 {
             color: #ffffff;
-            font-size: 2.5rem;
-            margin-bottom: 0px;
-            text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+            font-size: 2.3rem;
+            margin-bottom: 4px;
         }
         .title-box p {
-            color: #cfe0f7;
-            font-size: 1.05rem;
+            color: #dce9fb;
+            font-size: 1rem;
+            margin: 0;
         }
         .info-panel {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(6px);
-            border-radius: 16px;
+            background: #ffffff;
+            border: 1px solid #dbe6f5;
+            border-left: 5px solid #2a5298;
+            border-radius: 14px;
             padding: 25px 22px;
-            color: #eaf2ff;
+            box-shadow: 0 4px 14px rgba(18, 58, 122, 0.08);
         }
         .info-panel h3 {
-            color: #a9d0ff;
+            color: #123a7a;
             margin-top: 0;
+        }
+        .info-panel p {
+            color: #333;
         }
         .info-panel ul {
             padding-left: 20px;
@@ -55,21 +58,21 @@ st.markdown("""
         .info-panel li {
             margin-bottom: 8px;
             font-size: 0.95rem;
-            color: #dce9fb;
+            color: #444;
         }
         .form-panel {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 16px;
-            padding: 25px 28px 5px 28px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+            background: #ffffff;
+            border: 1px solid #dbe6f5;
+            border-radius: 14px;
+            padding: 25px 28px 8px 28px;
+            box-shadow: 0 4px 14px rgba(18, 58, 122, 0.08);
         }
-        .form-panel h3, .form-panel label, .form-panel p, .form-panel span,
-        .form-panel div[data-testid="stMarkdownContainer"] p {
-            color: #16307a !important;
+        .form-panel h3 {
+            color: #123a7a;
         }
         div.stButton > button {
             width: 100%;
-            background: linear-gradient(90deg, #0d1b4c, #2a5298);
+            background: linear-gradient(90deg, #123a7a, #2a5298);
             color: white;
             font-size: 18px;
             font-weight: 600;
@@ -79,8 +82,8 @@ st.markdown("""
             transition: 0.3s;
         }
         div.stButton > button:hover {
-            background: linear-gradient(90deg, #2a5298, #7db9e8);
-            transform: scale(1.02);
+            background: linear-gradient(90deg, #0d2c5e, #1e4380);
+            transform: scale(1.01);
         }
         .result-box {
             padding: 18px;
@@ -104,7 +107,7 @@ st.markdown("""
             text-align: center;
             margin-top: 35px;
             padding: 12px;
-            color: #cfe0f7;
+            color: #5a6b8c;
             font-size: 0.85rem;
         }
         section[data-testid="stSidebar"] {
