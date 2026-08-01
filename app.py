@@ -10,47 +10,52 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# ---------------- Custom CSS ----------------
+# ---------------- Custom CSS (Neon Purple & Violet Theme) ----------------
 st.markdown("""
     <style>
         .stApp {
-            background-color: #eef3fb;
+            background: radial-gradient(circle at top left, #1a0b2e 0%, #0d0518 60%, #05020c 100%);
         }
         .block-container {
             padding-top: 2rem;
         }
+        h1, h2, h3, h4, h5, h6, p, label, span, div {
+            color: #e6d9ff;
+        }
         .title-box {
             text-align: center;
             padding: 22px 10px;
-            background: linear-gradient(90deg, #123a7a, #2a5298);
+            background: linear-gradient(90deg, #6a0dad, #9d4edd, #c77dff);
             border-radius: 14px;
             margin-bottom: 25px;
-            box-shadow: 0 6px 18px rgba(18, 58, 122, 0.25);
+            box-shadow: 0 0 25px rgba(157, 78, 221, 0.7), 0 0 60px rgba(106, 13, 173, 0.4);
         }
         .title-box h1 {
-            color: #ffffff;
+            color: #ffffff !important;
             font-size: 2.3rem;
             margin-bottom: 4px;
+            text-shadow: 0 0 12px #e0aaff;
         }
         .title-box p {
-            color: #dce9fb;
+            color: #f3e8ff !important;
             font-size: 1rem;
             margin: 0;
         }
         .info-panel {
-            background: #ffffff;
-            border: 1px solid #dbe6f5;
-            border-left: 5px solid #2a5298;
+            background: #14091f;
+            border: 1px solid #6a0dad;
+            border-left: 5px solid #c77dff;
             border-radius: 14px;
             padding: 25px 22px;
-            box-shadow: 0 4px 14px rgba(18, 58, 122, 0.08);
+            box-shadow: 0 0 18px rgba(157, 78, 221, 0.35);
         }
         .info-panel h3 {
-            color: #123a7a;
+            color: #e0aaff !important;
             margin-top: 0;
+            text-shadow: 0 0 8px rgba(224, 170, 255, 0.5);
         }
         .info-panel p {
-            color: #333;
+            color: #dcd0f0 !important;
         }
         .info-panel ul {
             padding-left: 20px;
@@ -58,32 +63,34 @@ st.markdown("""
         .info-panel li {
             margin-bottom: 8px;
             font-size: 0.95rem;
-            color: #444;
+            color: #c9b8e8 !important;
         }
         .form-panel {
-            background: #ffffff;
-            border: 1px solid #dbe6f5;
+            background: #14091f;
+            border: 1px solid #6a0dad;
             border-radius: 14px;
             padding: 25px 28px 8px 28px;
-            box-shadow: 0 4px 14px rgba(18, 58, 122, 0.08);
+            box-shadow: 0 0 18px rgba(157, 78, 221, 0.35);
         }
         .form-panel h3 {
-            color: #123a7a;
+            color: #e0aaff !important;
         }
         div.stButton > button {
             width: 100%;
-            background: linear-gradient(90deg, #123a7a, #2a5298);
+            background: linear-gradient(90deg, #6a0dad, #9d4edd, #c77dff);
             color: white;
             font-size: 18px;
             font-weight: 600;
             padding: 10px;
             border-radius: 10px;
             border: none;
+            box-shadow: 0 0 15px rgba(157, 78, 221, 0.6);
             transition: 0.3s;
         }
         div.stButton > button:hover {
-            background: linear-gradient(90deg, #0d2c5e, #1e4380);
-            transform: scale(1.01);
+            background: linear-gradient(90deg, #9d4edd, #c77dff, #e0aaff);
+            box-shadow: 0 0 30px rgba(224, 170, 255, 0.9);
+            transform: scale(1.02);
         }
         .result-box {
             padding: 18px;
@@ -94,24 +101,42 @@ st.markdown("""
             margin-top: 15px;
         }
         .approved {
-            background-color: #d4edda;
-            color: #155724 !important;
-            border: 2px solid #28a745;
+            background-color: #1f0a33;
+            color: #c77dff !important;
+            border: 2px solid #9d4edd;
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.6);
         }
         .rejected {
-            background-color: #f8d7da;
-            color: #721c24 !important;
-            border: 2px solid #dc3545;
+            background-color: #2a0a1f;
+            color: #ff6ec7 !important;
+            border: 2px solid #ff2fb2;
+            box-shadow: 0 0 20px rgba(255, 47, 178, 0.5);
         }
         .footer {
             text-align: center;
             margin-top: 35px;
             padding: 12px;
-            color: #5a6b8c;
+            color: #a688cc !important;
             font-size: 0.85rem;
         }
         section[data-testid="stSidebar"] {
             display: none;
+        }
+        /* Slider accent */
+        div[data-baseweb="slider"] div[role="slider"] {
+            background-color: #c77dff !important;
+            box-shadow: 0 0 10px #c77dff;
+        }
+        div[data-baseweb="slider"] > div > div {
+            background: #6a0dad !important;
+        }
+        /* Selectbox */
+        div[data-baseweb="select"] > div {
+            background-color: #1f0a33 !important;
+            border-color: #6a0dad !important;
+        }
+        hr {
+            border-color: #6a0dad !important;
         }
     </style>
 """, unsafe_allow_html=True)
